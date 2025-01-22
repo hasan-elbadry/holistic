@@ -4,9 +4,7 @@ import 'package:holistic/screens/article_details_screen.dart';
 import 'package:provider/provider.dart';
 
 class CategoryScreen extends StatelessWidget {
-  CategoryScreen({super.key, required this.category});
-
-  String category;
+  CategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +12,7 @@ class CategoryScreen extends StatelessWidget {
     provider.get();
     return Scaffold(
       appBar: AppBar(
-        title: Text(category),
+        title: Text(provider.category.text),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

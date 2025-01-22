@@ -29,13 +29,10 @@ class NewsAppScreen extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
-                      provider.articles.clear();
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CategoryScreen(
-                                    category: provider.category.text,
-                                  )));
+                              builder: (context) => CategoryScreen()));
                     }
                   },
                   child: const Text('Search', style: TextStyle(fontSize: 25)))

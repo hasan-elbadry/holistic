@@ -10,9 +10,9 @@ class ArticleModel {
     List<ArticleModel> articles = [];
     for (var article in data['articles']) {
       articles.add(ArticleModel(
-          title: article['title'],
-          image: article['urlToImage'],
-          description: article['description']));
+          title: article['title']?? '',
+          image: article['urlToImage']??'',
+          description: article['description']??''));
     }
     return articles;
   }
